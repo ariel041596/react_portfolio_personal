@@ -75,6 +75,34 @@ const projects = [
       },
     ],
   },
+  {
+    _id: 4,
+    name: "Shopifarm",
+    title: "A Full E-Commerce Application for farmers made with MERN Stack",
+    image: "/images/projects/shopifarm.png",
+    stacks: [
+      {
+        _id: 1,
+        name: "mongodb",
+        image: "/images/mongo-logo.png",
+      },
+      {
+        _id: 2,
+        name: "express",
+        image: "/images/express.svg",
+      },
+      {
+        _id: 3,
+        name: "react",
+        image: "/images/react.svg",
+      },
+      {
+        _id: 3,
+        name: "node",
+        image: "/images/node-js.svg",
+      },
+    ],
+  },
 ];
 
 export default projects;

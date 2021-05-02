@@ -83,8 +83,6 @@ const Introduction = () => {
         <Typography
           className={classes.role}
           data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
           data-aos-easing="ease-in-out"
         >
           {count ? (
