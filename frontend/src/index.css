@@ -12,15 +12,6 @@ code {
     monospace;
 }
 
-/* .flex-container > div {
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-} */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -40,4 +31,35 @@ code {
 .flex-item-project {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.tooltip {
+  position: center;
+  font-size: 15px;
+  color: white;
+}
+
+.tooltip:before,
+.tooltip:after {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.tooltip:after {
+  content: attr(data-tooltip);
+  font-size: 15px;
+  top: 100px;
+  left: 110px;
+  border-radius: 5px;
+  background: #3f3f70;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  transform: translateY(-2px);
 }

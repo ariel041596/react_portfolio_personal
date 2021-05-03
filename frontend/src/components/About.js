@@ -72,13 +72,19 @@ const About = () => {
           data-aos-easing="ease-in-out"
           variant="h5"
         ></Typography>
-        <Typography className={classes.hi} variant="h3">
+        <Typography
+          data-aos="fade-down"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-easing="ease-in-out"
+          className={classes.hi}
+          variant="h3"
+        >
           Greetings!
         </Typography>
         <div
           data-aos="fade-up"
           data-aos-offset="200"
-          data-aos-delay="50"
           data-aos-easing="ease-in-out"
           style={{
             borderLeft: "6px solid black",

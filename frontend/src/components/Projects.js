@@ -13,6 +13,8 @@ import Avatar from "@material-ui/core/Avatar";
 
 import projects from "../data/projects";
 
+import Tilt from "../components/Tilt";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -23,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
     margin: 10,
-    padding: 5,
+    // padding: 5,
+    // backgroundColor: "#C1C1C1",
   },
 
   media: {
@@ -32,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
   section: {
     marginTop: "-20px",
     // backgroundColor: "#ffffff",
-    backgroundColor: "green",
+    // backgroundColor: "#1D1D1D",
+    backgroundColor: "#343A40",
     // height: "100vh",
   },
   title: {
@@ -73,6 +77,12 @@ const useStyles = makeStyles((theme) => ({
 
 const Projects = () => {
   const classes = useStyles();
+  const options = {
+    scale: 1.2,
+    speed: 1000,
+    max: 30,
+  };
+
   return (
     <section className={classes.section}>
       <Container>
@@ -89,44 +99,50 @@ const Projects = () => {
           data-aos-easing="ease-in-out"
         >
           {projects.map((project) => (
-            <Card className={classes.card} key={project._id}>
-              <CardActionArea>
-                <CardMedia
-                  className={classes.media}
-                  image={project.image}
-                  title={project.name}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h6" component="h2">
-                    {project.name}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {project.title}
-                  </Typography>
-                </CardContent>{" "}
-                <div className="flex-container">
-                  {project.stacks.map((stack) => (
-                    <div key={classes._id}>
-                      <Avatar
-                        className="flex-item"
-                        variant="square"
-                        alt={stack.name}
-                        src={stack.image}
-                      />
-                    </div>
-                  ))}
-                </div>
-              </CardActionArea>
-              {/* <CardActions>
+            <Tilt
+              options={options}
+              className="tooltip"
+              data-tooltip="Click for details"
+            >
+              <Card className={classes.card} key={project._id}>
+                <CardActionArea>
+                  <CardMedia
+                    className={classes.media}
+                    image={project.image}
+                    title={project.name}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h6" component="h2">
+                      {project.name}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {project.title}
+                    </Typography>
+                  </CardContent>{" "}
+                  <div className="flex-container">
+                    {project.stacks.map((stack) => (
+                      <div key={classes._id}>
+                        <Avatar
+                          className="flex-item"
+                          variant="square"
+                          alt={stack.name}
+                          src={stack.image}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </CardActionArea>
+                {/* <CardActions>
                 <Button size="small" color="primary">
                   See Details
                 </Button>
               </CardActions> */}
-            </Card>
+              </Card>
+            </Tilt>
           ))}
         </div>
       </Container>
