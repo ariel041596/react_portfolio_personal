@@ -17,14 +17,14 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "12px",
     cursor: "pointer",
     color: "white",
-    paddingTop: theme.spacing(20),
     [theme.breakpoints.up("sm")]: {
       display: "block",
     },
   },
   hi: {
+    paddingTop: theme.spacing(20),
     marginLeft: "15px",
-    paddingBottom: theme.spacing(2),
+    color: "white",
   },
   motto: {
     color: "white",
@@ -56,6 +56,15 @@ const Introduction = () => {
     <section className={classes.section}>
       <Container>
         <Typography
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          className={classes.hi}
+          variant="h3"
+          noWrap
+        >
+          Hi I'm
+        </Typography>
+        <Typography
           data-aos="fade-down"
           data-aos-offset="200"
           data-aos-delay="50"
@@ -64,11 +73,9 @@ const Introduction = () => {
           variant="h1"
           noWrap
         >
-          <Typography className={classes.hi} variant="h3" noWrap>
-            Hi I'm
-          </Typography>
           Ariel
         </Typography>
+
         <Typography
           data-aos="fade-right"
           data-aos-offset="200"
@@ -80,23 +87,23 @@ const Introduction = () => {
           "I am eager to learn everything as I am willing also to be trained"
         </Typography>
 
-        <Typography
-          className={classes.role}
-          data-aos="fade-right"
-          data-aos-easing="ease-in-out"
-        >
-          {count ? (
-            <Typist avgTypingDelay={150} onTypingDone={() => setCount(0)}>
-              <Typist.Delay ms={1000}></Typist.Delay>
-              <span> Web Developer</span>
-              <Typist.Backspace count={20} delay={1000} />
-              <span> Android Developer</span>
-              <Typist.Backspace count={20} delay={1000} />
-            </Typist>
-          ) : (
-            ""
-          )}
-        </Typography>
+        {count ? (
+          <Typist
+            className={classes.role}
+            data-aos="fade-right"
+            data-aos-easing="ease-in-out"
+            avgTypingDelay={150}
+            onTypingDone={() => setCount(0)}
+          >
+            <Typist.Delay ms={1000}></Typist.Delay>
+            <span> Web Developer</span>
+            <Typist.Backspace count={20} delay={1000} />
+            <span> Android Developer</span>
+            <Typist.Backspace count={20} delay={1000} />
+          </Typist>
+        ) : (
+          ""
+        )}
         <Button variant="outlined" color="primary" onClick={viewCV}>
           View my CV
         </Button>
