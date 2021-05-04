@@ -5,10 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-// import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-// import Button from "@material-ui/core/Button";
 import Avatar from "@material-ui/core/Avatar";
 
 import projects from "../data/projects";
@@ -33,10 +31,9 @@ const useStyles = makeStyles((theme) => ({
     height: 150,
   },
   section: {
-    marginTop: "-20px",
     // backgroundColor: "#ffffff",
-    // backgroundColor: "#1D1D1D",
-    backgroundColor: "#343A40",
+    backgroundColor: "#1D1D1D",
+    // backgroundColor: "#343A40",
     // height: "100vh",
   },
   title: {

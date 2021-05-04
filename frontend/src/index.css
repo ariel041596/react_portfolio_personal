@@ -21,6 +21,16 @@ code {
   justify-content: center;
 }
 
+.flex-container-services {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
 .flex-item {
   padding: 5px;
 }

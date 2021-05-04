@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     marginTop: "-20px",
     backgroundColor: "#1D1D1D",
+    // backgroundColor: "#343A40",
     height: "100vh",
   },
   title: {
@@ -98,7 +99,7 @@ const Introduction = () => {
             <Typist.Delay ms={1000}></Typist.Delay>
             <span> Web Developer</span>
             <Typist.Backspace count={20} delay={1000} />
-            <span> Android Developer</span>
+            <span> Mobile Developer</span>
             <Typist.Backspace count={20} delay={1000} />
           </Typist>
         ) : (

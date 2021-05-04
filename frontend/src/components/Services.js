@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-20px",
     backgroundColor: "#ffffff",
     // backgroundColor: "yellow",
-    height: "100vh",
+    // height: "100vh",
   },
   title: {
     color: "#E0E0E0",
@@ -106,7 +106,7 @@ const Services = () => {
           <span className={classes.offer}>{"  that I offer "}</span>
         </div>
         <div
-          className="flex-container"
+          className="flex-container-services "
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="50"
