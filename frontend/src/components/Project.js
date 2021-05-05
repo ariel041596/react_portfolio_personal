@@ -11,7 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 import projects from "../data/projects";
 
-import Tilt from "../components/Tilt";
+import Tilt from "./Tilt";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,10 +23,8 @@ const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
     margin: 10,
-    // padding: 5,
     // backgroundColor: "#C1C1C1",
   },
-
   media: {
     height: 150,
   },
@@ -75,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
   const classes = useStyles();
   const options = {
-    scale: 1.2,
+    scale: 1,
     speed: 1000,
     max: 30,
   };
@@ -89,7 +87,7 @@ const Projects = () => {
           <span className={classes.titleClosing}>{" /> "}</span>
         </div>
         <div
-          className="flex-container "
+          className="flex-container"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="50"
@@ -101,7 +99,7 @@ const Projects = () => {
               className="tooltip"
               data-tooltip="Click for details"
             >
-              <Card className={classes.card} key={project._id}>
+              <Card key={project._id} className={classes.card}>
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}

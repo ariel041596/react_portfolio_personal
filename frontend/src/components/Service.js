@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
   },
   offer: {
     color: "#E0E0E0",
-    fontSize: "30px",
+    fontSize: "4vw",
     top: "-20px",
   },
   semiTitle: {

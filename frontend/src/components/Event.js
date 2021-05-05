@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     // backgroundColor: "#ffffff",
     backgroundColor: "#1D1D1D",
-    height: "100vh",
+    // height: "100vh",
   },
   titleOpening: {
     color: "#E0E0E0",
@@ -48,14 +48,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "30px",
     top: "-20px",
   },
-
-
 }));
 
 const Events = () => {
   const classes = useStyles();
   const options = {
-    scale: 1.2,
+    scale: 1,
     speed: 1000,
     max: 30,
   };
@@ -101,18 +99,20 @@ const Events = () => {
                     </Typography>
                   </CardContent>{" "}
                   <div className="flex-container">
-                        <Avatar
-                          className="flex-item"
-                          variant="square"
-                          alt={event.name}
-                          src={event.logo}
-                        />
-                     </div>
+                    <Avatar
+                      className="flex-item"
+                      variant="square"
+                      alt={event.name}
+                      src={event.logo}
+                    />
+                  </div>
                 </CardActionArea>
-
               </Card>
             </Tilt>
           ))}
+        </div>
+        <div>
+          <p></p>
         </div>
       </Container>
     </section>

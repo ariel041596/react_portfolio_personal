@@ -1,18 +1,20 @@
 import React from "react";
 import Introduction from "../components/Introduction";
-import Projects from "../components/Projects";
+import Project from "../components/Project";
 import About from "../components/About";
-import Services from "../components/Services";
-import Events from "../components/Events";
+import Service from "../components/Service";
+import Event from "../components/Event";
+import Contact from "../components/Contact";
 
 const HomeScreen = () => {
   return (
     <>
       <Introduction></Introduction>
       <About></About>
-      <Services></Services>
-      <Projects></Projects>
-      <Events></Events>
+      <Service></Service>
+      <Project></Project>
+      <Event></Event>
+      <Contact></Contact>
     </>
   );
 };

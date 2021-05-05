@@ -19,6 +19,7 @@ code {
   align-items: center;
   align-self: center;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 .flex-container-services {
@@ -72,4 +73,9 @@ code {
 .tooltip:hover::after {
   opacity: 1;
   transform: translateY(-2px);
+}
+
+.card {
+  max-width: 345px;
+  margin: 10px;
 }
