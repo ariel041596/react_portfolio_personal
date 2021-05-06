@@ -79,3 +79,26 @@ code {
   max-width: 345px;
   margin: 10px;
 }
+
+/* .icon {
+  cursor: pointer;  
+  width: "100%";
+  max-width: 6vh;
+  height: "auto";
+  transition: all 0.2s ease-in-out;
+}
+.icon:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}
+.icon-git {
+  cursor: pointer;
+  width: "100%";
+  max-width: 6vh;
+  height: "auto";
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.icon-git:hover {
+  transform: scale(1.1);
+} */

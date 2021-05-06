@@ -6,9 +6,12 @@ import Service from "../components/Service";
 import Event from "../components/Event";
 import Contact from "../components/Contact";
 
+import Meta from "../components/Meta";
+
 const HomeScreen = () => {
   return (
     <>
+      <Meta></Meta>
       <Introduction></Introduction>
       <About></About>
       <Service></Service>

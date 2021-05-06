@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
@@ -94,50 +95,55 @@ const Projects = () => {
           data-aos-easing="ease-in-out"
         >
           {projects.map((project) => (
-            <Tilt
-              options={options}
-              className="tooltip"
-              data-tooltip="Click for details"
+            <Link
+              to={`/projects/${project._id}`}
+              style={{ textDecoration: "none" }}
             >
-              <Card key={project._id} className={classes.card}>
-                <CardActionArea>
-                  <CardMedia
-                    className={classes.media}
-                    image={project.image}
-                    title={project.name}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h6" component="h2">
-                      {project.name}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      {project.title}
-                    </Typography>
-                  </CardContent>{" "}
-                  <div className="flex-container">
-                    {project.stacks.map((stack) => (
-                      <div key={classes._id}>
-                        <Avatar
-                          className="flex-item"
-                          variant="square"
-                          alt={stack.name}
-                          src={stack.image}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </CardActionArea>
-                {/* <CardActions>
+              <Tilt
+                options={options}
+                className="tooltip"
+                data-tooltip="Click for details"
+              >
+                <Card key={project._id} className={classes.card}>
+                  <CardActionArea>
+                    <CardMedia
+                      className={classes.media}
+                      image={project.image}
+                      title={project.name}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h6" component="h2">
+                        {project.name}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        {project.title}
+                      </Typography>
+                    </CardContent>{" "}
+                    <div className="flex-container">
+                      {project.stacks.map((stack) => (
+                        <div key={classes._id}>
+                          <Avatar
+                            className="flex-item"
+                            variant="square"
+                            alt={stack.name}
+                            src={stack.image}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </CardActionArea>
+                  {/* <CardActions>
                 <Button size="small" color="primary">
                   See Details
                 </Button>
               </CardActions> */}
-              </Card>
-            </Tilt>
+                </Card>
+              </Tilt>
+            </Link>
           ))}
         </div>
       </Container>

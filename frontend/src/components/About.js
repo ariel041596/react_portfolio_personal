@@ -53,7 +53,7 @@ const second =
   "Coding kept my mind busy and even awake that it feels like dreaming while not in sleep, but learning skills are like a quest on myself that will leads to success. What I began as interest blossomed into a full-on passion. I have a strong analytical skills that I regulary put into practice through reading documentation, deep learning and determined in terms of work, and give my very best to situational problems";
 
 const third =
-  "I dont have a huge portfolio of live work at the moment but I do have a few live demos and screenshots of some of my projects in design and production";
+  "I do also have live demos and screenshots of my previous projects in design and production that I can showcase to prove my skills";
 
 const About = () => {
   const classes = useStyles();

@@ -9,6 +9,7 @@ import Header from "./components/Header";
 
 // Screens
 import HomeScreen from "./screens/HomeScreen";
+import ProjectScreen from "./screens/ProjectScreen";
 
 const App = () => {
   useEffect(() => {
@@ -21,6 +22,7 @@ const App = () => {
     <Router>
       <Header></Header>
       <Route path="/" component={HomeScreen} exact></Route>
+      <Route path="/projects/:id" component={ProjectScreen} exact></Route>
     </Router>
   );
 };

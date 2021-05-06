@@ -8,6 +8,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import IconButton from "@material-ui/core/IconButton";
 
 import dotenv from "dotenv";
+// import { Avatar } from "@material-ui/core";
 
 dotenv.config();
 
@@ -63,23 +64,25 @@ const useStyles = makeStyles((theme) => ({
     height: "auto",
     // marginTop: "20px",
     margin: "20px 10px 0 10px",
+    cursor: "pointer",
   },
   icon: {
     color: "#ffffff",
   },
+  footer: {
+    color: "white",
+    marginTop: "50px",
+  },
 }));
-const githubURL = process.env.GITHUB_URL;
-const linkedInURL = process.env.LINKED_IN_URL;
 const Contact = () => {
-  const github = "https://github.com/ariel041596";
-  const linkedIn = "https://www.linkedin.com/in/ariel-espinoza-4044a8200";
+  const githubURL = "https://github.com/ariel041596";
+  const linkedInURL = "https://www.linkedin.com/in/ariel-espinoza-4044a8200";
   const classes = useStyles();
   const viewGithub = () => {
-    window.open(github, "_blank").focus();
-    console.log(githubURL, linkedInURL);
+    window.open(githubURL, "_blank").focus();
   };
   const viewLinkedIn = () => {
-    window.open(linkedIn, "_blank").focus();
+    window.open(linkedInURL, "_blank").focus();
   };
   return (
     <section className={classes.section}>
@@ -112,22 +115,36 @@ const Contact = () => {
             Find me on:
           </Typography>
           <IconButton
-            onClick={viewGithub}
             className={classes.icon}
+            onClick={viewGithub}
             aria-label="upload picture"
             component="span"
           >
             <GitHubIcon fontSize="large" />
           </IconButton>
           <IconButton
-            onClick={viewLinkedIn}
             className={classes.icon}
+            onClick={viewLinkedIn}
             aria-label="upload picture"
             component="span"
           >
             <LinkedInIcon fontSize="large" />
           </IconButton>
+          {/* <img
+            // className={classes.large}
+            className="icon-git"
+            onClick={viewGithub}
+            alt="LinkedIn"
+            src="/images/github.svg"
+          ></img>
+          <img
+            className="icon"
+            onClick={viewLinkedIn}
+            alt="LinkedIn"
+            src="/images/linked-in.svg"
+          ></img> */}
         </div>
+        <div className={classes.footer}> © Ariel-2021 </div>
       </Container>
     </section>
   );
