@@ -57,7 +57,7 @@ const Introduction = () => {
     <section className={classes.section}>
       <Container>
         <Typography
-          data-aos="fade-up"
+          data-aos="fade-left"
           data-aos-easing="ease-in-out"
           className={classes.hi}
           variant="h3"
@@ -66,7 +66,7 @@ const Introduction = () => {
           Hi I'm
         </Typography>
         <Typography
-          data-aos="fade-down"
+          data-aos="fade-left"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-easing="ease-in-out"

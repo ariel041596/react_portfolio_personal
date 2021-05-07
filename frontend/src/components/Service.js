@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     marginTop: "-20px",
     backgroundColor: "#ffffff",
+    paddingBottom: "50px",
     // backgroundColor: "yellow",
     // height: "100vh",
   },

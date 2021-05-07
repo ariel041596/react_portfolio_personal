@@ -107,8 +107,8 @@ const Contact = () => {
           className={classes.hi}
           variant="h4"
         >
-          Let's make something great together. It's time to make your ideas
-          happen to be greater product
+          Sound's great right? It's time to make your ideas happen to be great
+          product
         </Typography>
         <div className={classes.findme}>
           <Typography data-aos="fade-right" variant="h5">

@@ -7,15 +7,15 @@ import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
+import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles } from "@material-ui/core/styles";
-import GitHubIcon from "@material-ui/icons/GitHub";
 
 import Carousel from "nuka-carousel";
 
-// import ReactPlayer from "react-player";
+import ReactPlayer from "react-player";
 
 import projects from "../data/projects";
 
@@ -31,14 +31,11 @@ const useStyles = makeStyles((theme) => ({
     height: "auto",
   },
 }));
-const ProjectScreen = ({ match, history }) => {
+const EventScreen = ({ match, history }) => {
   const classes = useStyles();
   const projectID = match.params.id;
   const [data, setData] = useState("");
   const [stacks, setStacks] = useState([]);
-  const viewGithub = () => {
-    window.open(data.githubURL, "_blank").focus();
-  };
   useEffect(() => {
     const projectData = projects.find((proj) => proj._id === Number(projectID));
     setData(projectData);
@@ -58,12 +55,11 @@ const ProjectScreen = ({ match, history }) => {
           <Grid item xs={12} sm={6}>
             <Carousel>
               {data.youtubeURL && (
-                // <ReactPlayer
-                //   width="100%"
-                //   height="300px"
-                //   url={data.youtubeURL}
-                // />
-                <YoutubeEmbed embedId={data.youtubeID}></YoutubeEmbed>
+                <ReactPlayer
+                  width="100%"
+                  height="300px"
+                  url={data.youtubeURL}
+                />
               )}
               <img src={data.image} alt={data.name} />
             </Carousel>
@@ -90,31 +86,10 @@ const ProjectScreen = ({ match, history }) => {
               ))}
             </div>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <div
-              style={{
-                textAlign: "center",
-                alignItems: "center",
-                alignSelf: "center",
-                justifyContent: "center",
-              }}
-            >
-              {data.githubURL && (
-                <Button
-                  onClick={viewGithub}
-                  variant="outlined"
-                  color="primary"
-                  startIcon={<GitHubIcon />}
-                >
-                  View source code
-                </Button>
-              )}
-            </div>
-          </Grid>
         </Grid>
       </Container>
     </>
   );
 };
 
-export default ProjectScreen;
+export default EventScreen;

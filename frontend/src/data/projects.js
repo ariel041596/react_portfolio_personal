@@ -5,6 +5,8 @@ const projects = [
     title:
       "Online Project Reservation with Mobile App and SMS Notification for People 360",
     image: "/images/projects/p360-billing.png",
+    youtubeID: "7VzUjG-DnUM",
+    youtubeURL: "https://www.youtube.com/watch?v=7VzUjG-DnUM&t=1s",
     stacks: [
       {
         _id: 1,
@@ -34,6 +36,7 @@ const projects = [
     title:
       "Property Management System for Department of Information and Communications Technology",
     image: "/images/projects/pmis-dashboard.png",
+    githubURL: "https://github.com/ariel041596/Laravel-VueJs.git",
     stacks: [
       {
         _id: 1,
@@ -57,6 +60,7 @@ const projects = [
     name: "System Analysis Design Project",
     title: "RFID Parking Management System for Valenzuela Gateway Parking",
     image: "/images/projects/RFID-User.png",
+    githubURL: "https://github.com/ariel041596/RFID-Parking-System.git",
     stacks: [
       {
         _id: 1,
@@ -80,6 +84,7 @@ const projects = [
     name: "Shopifarm",
     title: "A Full E-Commerce Application for farmers made with MERN Stack",
     image: "/images/projects/shopifarm.png",
+    githubURL: "https://github.com/ariel041596/shopifarm.git",
     stacks: [
       {
         _id: 1,
@@ -97,7 +102,7 @@ const projects = [
         image: "/images/react.svg",
       },
       {
-        _id: 3,
+        _id: 4,
         name: "node",
         image: "/images/node-js.svg",
       },

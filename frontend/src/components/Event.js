@@ -13,6 +13,8 @@ import events from "../data/events";
 
 import Tilt from "../components/Tilt";
 
+import Carousel from "nuka-carousel";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -31,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
   section: {
     // backgroundColor: "#ffffff",
     backgroundColor: "#1D1D1D",
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
     // height: "100vh",
   },
   titleOpening: {
@@ -74,11 +78,7 @@ const Events = () => {
           data-aos-easing="ease-in-out"
         >
           {events.map((event) => (
-            <Tilt
-              options={options}
-              className="tooltip"
-              data-tooltip="Click for details"
-            >
+            <Tilt options={options}>
               <Card className={classes.card} key={event._id}>
                 <CardActionArea>
                   <CardMedia
@@ -99,12 +99,14 @@ const Events = () => {
                     </Typography>
                   </CardContent>{" "}
                   <div className="flex-container">
-                    <Avatar
-                      className="flex-item"
-                      variant="square"
-                      alt={event.name}
-                      src={event.logo}
-                    />
+                    {event.logo && (
+                      <Avatar
+                        className="flex-item"
+                        variant="square"
+                        alt={event.name}
+                        src={event.logo}
+                      />
+                    )}
                   </div>
                 </CardActionArea>
               </Card>

@@ -10,6 +10,7 @@ import Header from "./components/Header";
 // Screens
 import HomeScreen from "./screens/HomeScreen";
 import ProjectScreen from "./screens/ProjectScreen";
+import EventScreen from "./screens/EventScreen";
 
 const App = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const App = () => {
       <Header></Header>
       <Route path="/" component={HomeScreen} exact></Route>
       <Route path="/projects/:id" component={ProjectScreen} exact></Route>
+      <Route path="/events/:id" component={EventScreen} exact></Route>
     </Router>
   );
 };

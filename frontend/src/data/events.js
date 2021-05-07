@@ -19,12 +19,12 @@ const events = [
   },
   {
     _id: 2,
-    name: "STI College Muñoz",
+    name: "Guest Speaker - STI College Muñoz",
     title: "Guest Speaker",
     description:
-      "Discussing ideas on how to effectively avoid unecessary ideas that may effect on taking-up the THESIS",
+      "Discussing on how to effectively avoid unecessary ideas that may cause bad effect on taking-up the THESIS",
     image: "/images/events/guest-speaker.JPG",
-    logo: "/images/events/agrostat-image.jpg",
+    // logo: "/images/events/agrostat-image.jpg",
   },
 ];
 
