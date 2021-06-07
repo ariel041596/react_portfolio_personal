@@ -47,7 +47,7 @@ const Introduction = () => {
 
   const classes = useStyles();
   const url =
-    "https://drive.google.com/file/d/1E16PytuFHC8UNLsX0y0v1vM5U-b5KoqD/view";
+    "https://drive.google.com/file/d/1ICbSrjHr2loFwZ7DD9au8dmAOFdqe4bX/view?usp=sharing";
 
   const viewCV = () => {
     window.open(url, "_blank").focus();
