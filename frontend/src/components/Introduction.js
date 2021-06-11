@@ -54,7 +54,7 @@ const Introduction = () => {
   };
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="/">
       <Container>
         <Typography
           data-aos="fade-left"

@@ -15,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   section: {
-    marginTop: "-20px",
+    // marginTop: "-20px",
     backgroundColor: "#ffffff",
     paddingBottom: "50px",
     // backgroundColor: "yellow",
-    // height: "100vh",
+    minHeight: "100vh",
   },
   title: {
     color: "#E0E0E0",
@@ -55,12 +55,28 @@ const useStyles = makeStyles((theme) => ({
   },
   semiTitle: {
     color: "#A59D7D",
-    // paddingTop: theme.spacing(5),
+    paddingTop: theme.spacing(5),
+    fontSize: "30px",
   },
   large: {
     width: "100%",
     maxWidth: "5vw",
     height: "auto",
+  },
+  titleOpening: {
+    color: "#A59D7D",
+    fontSize: "30px",
+    top: "-20px",
+  },
+  titleMid: {
+    color: "#A59D7D",
+    padding: theme.spacing(3),
+    fontSize: "8vw",
+  },
+  titleClosing: {
+    color: "#A59D7D",
+    fontSize: "30px",
+    top: "-20px",
   },
 }));
 
@@ -68,19 +84,20 @@ const Services = () => {
   const classes = useStyles();
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="stack">
       <Container>
-        <Typography
-          className={classes.semiTitle}
+        <div
           data-aos="fade-down"
           data-aos-offset="200"
-          data-aos-delay="50"
+          data-aos-delay="200"
           data-aos-easing="ease-in-out"
-          variant="h4"
-          noWrap
         >
-          {"/ TECH STACK"}{" "}
-        </Typography>
+          <div className={classes.root}>
+            <span className={classes.semiTitle}>{" < "}</span>
+            <span className={classes.semiTitle}>{" TECH STACK "}</span>
+            <span className={classes.semiTitle}>{" /> "}</span>
+          </div>
+        </div>
         <div
           data-aos="fade-up"
           data-aos-offset="200"

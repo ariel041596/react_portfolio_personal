@@ -85,7 +85,7 @@ const Contact = () => {
     window.open(linkedInURL, "_blank").focus();
   };
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="contact">
       <Container>
         <div className={classes.root}>
           <span className={classes.titleOpening}>{" < "}</span>

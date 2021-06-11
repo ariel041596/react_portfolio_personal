@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#1D1D1D",
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    // height: "100vh",
+    minHeight: "100vh",
   },
   titleOpening: {
     color: "#E0E0E0",
@@ -63,7 +63,7 @@ const Events = () => {
   };
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="events">
       <Container>
         <div className={classes.root}>
           <span className={classes.titleOpening}>{" < "}</span>

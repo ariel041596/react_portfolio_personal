@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "#ffffff",
     backgroundColor: "#1D1D1D",
     // backgroundColor: "#343A40",
-    // height: "100vh",
+    minHeight: "100vh",
   },
   title: {
     color: "#E0E0E0",
@@ -80,7 +80,7 @@ const Projects = () => {
   };
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="projects">
       <Container>
         <div className={classes.root}>
           <span className={classes.titleOpening}>{" < "}</span>

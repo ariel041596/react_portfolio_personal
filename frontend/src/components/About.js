@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   section: {
-    marginTop: "-20px",
+    // marginTop: "-20px",
     backgroundColor: "#ffffff",
     height: "100vh",
   },
@@ -58,7 +58,7 @@ const third =
 const About = () => {
   const classes = useStyles();
   return (
-    <section className={classes.section}>
+    <section className={classes.section} id="about">
       <Container>
         <div className={classes.root}>
           <span className={classes.titleOpening}>{" < "}</span>

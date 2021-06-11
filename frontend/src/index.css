@@ -139,3 +139,31 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: #257ba3;
 }
+
+.scrollspy {
+  background-color: #515151;
+  margin: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 10px;
+  padding: 10px 0;
+}
+a {
+  color: white;
+}
+.isCurrent {
+  font-weight: bold;
+  background-color: rgba(100,100,100,1);
+	border-left: thick solid rgba(0,255,0,0.5);
+}
+
+.isCurrent a,
+h2 {
+  color: #f1a07a;
+}
